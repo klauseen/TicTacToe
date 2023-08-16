@@ -19,23 +19,72 @@ public class Main {
         printGameBoard(gameBoard);
 
         Scanner scanner = new Scanner(System.in);
+        boolean player1Number;
+        boolean player2Number;
 
-        while(true) {
 
+
+        while(true){
             System.out.println("Player1 choose a position from 1 to 9 :");
             int player1Position = scanner.nextInt();
-            choosePosition(gameBoard, player1Position , "Player1");
-            printGameBoard(gameBoard);
-            System.out.println("Player2 choose a position from 1 to 9 :");
-            int player2Position = scanner.nextInt();
-            choosePosition(gameBoard , player2Position , "Player2");
-            printGameBoard(gameBoard);
-            String status = checkStatus();
-            System.out.println(status);
 
+            if (player1Position < 0 || player1Position > 9) {
+                player1Number = true;
+            } else {
+                player1Number = false;
+            }
+
+            while (player1Number) {
+                System.out.println("Player1 please choose a number between 1-9 : ");
+                 player1Position = scanner.nextInt();
+
+                if (player1Position < 0 || player1Position > 9) {
+                    player1Number = true;
+                } else {
+                    player1Number = false;
+                }
+            }
+
+            while(player1position.contains(player1Position) || player2position.contains(player1Position)) {
+                System.out.println("Position is unavailable. Choose another position");
+                player1Position = scanner.nextInt();
+            }
+
+            choosePosition(gameBoard, player1Position , "Player1");
+                printGameBoard(gameBoard);
+                System.out.println("Player2 choose a position from 1 to 9 :");
+                int player2Position = scanner.nextInt();
+
+            if (player2Position < 0 || player2Position > 9) {
+                player2Number = true;
+            } else {
+                player2Number = false;
+            }
+
+            while (player2Number) {
+                System.out.println("Player2 please choose a number between 1-9 : ");
+                player2Position = scanner.nextInt();
+
+                if(player2Position < 0 || player2Position > 9) {
+                    player2Number = true;
+                } else {
+                    player2Number = false;
+                }
+            }
+
+            while(player1position.contains(player2Position) || player2position.contains(player2Position)) {
+                System.out.println("Position is unavailable. Choose another position");
+                player2Position= scanner.nextInt();
+            }
+
+                choosePosition(gameBoard , player2Position , "Player2");
+                printGameBoard(gameBoard);
+                String status = checkStatus();
+                System.out.println(status);
+
+            }
         }
 
-    }
 
 
 
@@ -99,9 +148,9 @@ public class Main {
       win.add(secondDiagonal);
 
       for(List list: win) {
-          if(player1position.containsAll(win)){
+          if(player1position.containsAll(list)){
               return "Player1 won the game";
-          }else if(player2position.containsAll(win)){
+          }else if(player2position.containsAll(list)){
               return "Player2 won the game";
           }else if(player1position.size() + player2position.size() == 9  ){
               return "Draw";
@@ -109,7 +158,7 @@ public class Main {
       }
 
 
-        return" ";
+        return"";
     }
 
 
