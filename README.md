@@ -1,6 +1,6 @@
 # TicTacToe
-![image](https://github.com/klauseen/TicTacToe/assets/134730407/dc0139f0-b19e-48d7-b547-cc2144827c7e)
-
+[![image](https://github.com/klauseen/TicTacToe/assets/134730407/dc0139f0-b19e-48d7-b547-cc2144827c7e)
+](https://lindahorn.com/images/large/AA788.jpg)
 
 This is Tic Tac Toe for 2 players that works in console. The positions are numbered from 1 to 9 like this: 
 
