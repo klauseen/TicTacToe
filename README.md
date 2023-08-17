@@ -3,7 +3,8 @@
 
 This is Tic Tac Toe for 2 players that works in console. The positions are numbered from 1 to 9 like this: 
 
-![Untitled_design-removebg-preview](https://github.com/klauseen/TicTacToe/assets/134730407/9eabd452-a0b8-43f1-9e87-03dd775eca93)
+![Untitled_design-removebg-preview](https://github.com/klauseen/TicTacToe/assets/134730407/3fdae1e3-9b82-46b4-87ad-b1038497896a)
+
 
 Everytime the first player will play with the 'X'-s and the second one with 'O'-es.
 
