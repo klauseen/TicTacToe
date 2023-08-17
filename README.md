@@ -6,5 +6,6 @@ This is Tic Tac Toe for 2 players that works in console. The positions are numbe
 ![image](https://github.com/klauseen/TicTacToe/assets/134730407/2f25ab64-d361-4aa9-90cd-cdbceda8d869)
 
 Everytime the first player will play with the 'X'-s and the second one with 'O'-es.
+Hope you'll have FUN :)
 
 
